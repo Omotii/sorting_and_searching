@@ -1,0 +1,16 @@
+PROCEDURE insertionSort(tab: ARRRAY OF INTEGER)
+VAR
+    i, n, currentElement : INTEGER
+BEGIN
+    n = tab.length;
+    FOR i FROM 0 TO n-1 DO
+        currentElement = arr[i];
+        FOR j FROM i TO i-1  DO // to search in the sub-array
+            IF (tab[j] > tab[currentElement]) THEN //sorting arr[i] into place
+                tab[j] = j - 1;
+            END_IF
+        END_FOR
+
+    END_FOR
+END
+
